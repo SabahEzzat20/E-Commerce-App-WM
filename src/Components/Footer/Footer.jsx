@@ -15,8 +15,8 @@ export const Footer = () => {
                     <p className='subscribe-title'>Subscribe</p>
                     <small>Get 10% off your first order</small>
                     <Stack className='subscribe-input' direction='row' spacing={1} >
-                        <input type="text" placeholder='Enter your email'/> 
-                        <img src={sendIcon} alt="submit email for subscribe" />
+                        <input type="text" placeholder='Enter your email' aria-label="Email address"/> 
+                        <img src={sendIcon} alt="Send icon for subscribing" />
                     </Stack>
                 </Grid>
                 <Grid size={{ xs: 12, sm: 6, md: 4, lg: 2, xl: 2 }} className="footer-links-list">
@@ -44,7 +44,7 @@ export const Footer = () => {
                     <p className="footer-title">Download App</p>
                     <small>Save $3 with App New User Only</small>
                     <Stack direction='row' spacing={1} className='qr-code'>
-                        <img src={QRCodeImage} alt="QR code" />
+                        <img src={QRCodeImage} alt="QR code for app download" />
                         <Stack direction='column' sx={{justifyContent: 'space-between'}}>
                             <img src={googlePlayImage} alt="get the app on google play" />
                             <img src={appStoreImage} alt="get the app on app store" />
@@ -53,7 +53,7 @@ export const Footer = () => {
                 </Grid>
             </Grid>
             <Grid container size={12} className="copyright" sx={{fontSize: {xs:'10px',sm: '12px',md: '13px',lg: '16px',xl:'16px'}}}>
-                <p>&copy; Copyright Rimel 2022. All right reserved</p>
+                <p>&copy; Copyright Rimel {new Date().getFullYear()}. All right reserved</p>
             </Grid>
         </footer>
     );
